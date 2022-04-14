@@ -1,33 +1,44 @@
 {
-	"name": "Awesome Extension",
-	"version": "0.0.1",
-	"description": "An awesome new browser extension",
-	"homepage_url": "https://github.com/multicam/browser-extension-boilerplate",
-	"manifest_version": 2,
-	"minimum_chrome_version": "80",
-	"icons": {
-		"128": "icon.png"
-	},
-	"permissions": [
-		"https://github.com/multicam/browser-extension-boilerplate/*",
-		"storage"
-	],
-	"content_scripts": [
-		{
-			"matches": [ "https://github.com/multicam/browser-extension-boilerplate/*" ],
-			"js": [ "content.js" ],
-			"css": [ "content.css" ],
-			"run_at": "document_end"
-		}
-	],
-	"options_ui": {
-		"browser_style": true,
-		"page": "options.html"
-	},
-	"background": {
-		"persistent": false,
-		"scripts": [
-			"background.js"
-		]
+  "name": "Awesome Extension",
+  "version": "0.0.1",
+  "description": "An awesome new browser extension",
+  "homepage_url": "https://github.com/multicam/browser-extension-boilerplate",
+  "manifest_version": 2,
+  "minimum_chrome_version": "80",
+  "icons": {
+	"128": "icon.png"
+  },
+  "action": {
+	"default_title": "Yo man",
+	"default_popup": "hello.html",
+	"default_icon": "hello_extension.png"
+  },
+  "permissions": [
+	"https://github.com/multicam/browser-extension-boilerplate/*",
+	"storage"
+  ],
+  "content_scripts": [
+	{
+	  "matches": [
+		"https://github.com/multicam/browser-extension-boilerplate/*"
+	  ],
+	  "js": [
+		"content.js"
+	  ],
+	  "css": [
+		"content.css"
+	  ],
+	  "run_at": "document_end"
 	}
+  ],
+  "options_ui": {
+	"browser_style": true,
+	"page": "options.html"
+  },
+  "background": {
+	"persistent": false,
+	"scripts": [
+	  "background.js"
+	]
+  }
 }

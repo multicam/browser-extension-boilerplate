@@ -2,7 +2,7 @@ import optionsStorage from './options-storage.js';
 
 async function init() {
 	const options = await optionsStorage.getAll();
-	const color = 'rgb(' + options.colorRed + ', ' + options.colorGreen + ',' + options.colorBlue + ')';
+	const color = `rgb(${options.colorRed}, ${options.colorGreen}, ${options.colorBlue})`;
 	const text = options.text;
 	const notice = document.createElement('div');
 	notice.innerHTML = text;
@@ -12,4 +12,4 @@ async function init() {
 	notice.style.color = color;
 }
 
-init();
+init().then(console.log);
