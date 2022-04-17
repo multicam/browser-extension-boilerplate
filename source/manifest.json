@@ -8,10 +8,15 @@
   "icons": {
 	"128": "icon.png"
   },
+  "browser_specific_settings": {
+	"gecko": {
+	  "id": "multicam@github"
+	}
+  },
   "browser_action": {
 	"default_title": "Yo Man!",
-	"default_popup": "hello.html",
-	"default_icon": "hello_extension.png"
+	"default_popup": "entry/index.html",
+	"default_icon": "entry/icon.png"
   },
   "permissions": [
 	"https://github.com/multicam/browser-extension-boilerplate/*",
