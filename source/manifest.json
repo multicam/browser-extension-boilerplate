@@ -8,8 +8,8 @@
   "icons": {
 	"128": "icon.png"
   },
-  "action": {
-	"default_title": "Yo man",
+  "browser_action": {
+	"default_title": "Yo Man!",
 	"default_popup": "hello.html",
 	"default_icon": "hello_extension.png"
   },
